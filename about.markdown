@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About This Project
+title: About This Senior Project
 permalink: /Check Plant Status/
 ---
 
