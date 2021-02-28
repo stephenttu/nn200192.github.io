@@ -2,31 +2,14 @@
 layout: compress
 ---
 
-<!DOCTYPE html>
-<html>
 
-<head>
-    {% include head.html %}
-</head>
+<h2> Display Gender (Female or Male) Information </h2>
+{% assign projects = site.data.projects %}
+{% assign projects = projects | sort:"Gender" %}
 
-<body>
-    {% include navbar.html %}
+{% for project in projects %}
+<ul>
+<li><strong>{{ project.Gender }} </strong>
+</ul>
 
-    <!--Main Section-->
-    <section class="hero is-fullheight" id="project">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <div class="section">
-                    <p class="subtitle is-uppercase has-text-weight-medium has-text-grey">Have a Good Read</p>
-                </div>
-                {% include project-card.html %}
-            </div>
-        </div>
-    </section>
-    </div>
-
-    <!--Footer-->
-    {% include footer.html %}
-</body>
-
-</html>
+{% endfor %}
